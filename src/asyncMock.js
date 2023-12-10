@@ -23,7 +23,7 @@ const products = [
         name: 'Armonizacion de Chakras',
         price: '7000',
         category: 'sesiones',
-        image: 'https://d22fxaf9t8d39k.cloudfront.net/6482215d1fe6e84e47ac8a1816b1a94206fdfc0d6883e5611af9cb25e0dcfffc156461.png',
+        img: 'https://d22fxaf9t8d39k.cloudfront.net/6482215d1fe6e84e47ac8a1816b1a94206fdfc0d6883e5611af9cb25e0dcfffc156461.png',
         stock: '10',
         description: 'busca equilibrar y energizar los centros de energía del cuerpo'
     },
@@ -32,7 +32,7 @@ const products = [
         "id": '4',
         "name": 'Lazos con el Alma',
         "price": '8400',
-        "image": 'https://d22fxaf9t8d39k.cloudfront.net/3038612c1d17a85826ec49928e9bcc574f86cad37583e5c4f8aeacc74a9131ba156461.png',
+        "img": 'https://d22fxaf9t8d39k.cloudfront.net/3038612c1d17a85826ec49928e9bcc574f86cad37583e5c4f8aeacc74a9131ba156461.png',
         stock: '10',
         description: ' El objetivo es descubrir y nutrir aspectos internos, sanar heridas emocionales y promover un mayor autoconocimiento y aceptación'
     }
