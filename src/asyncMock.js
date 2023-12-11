@@ -22,27 +22,45 @@ const products = [
         id: '3',
         name: 'Armonizacion de Chakras',
         price: '7000',
-        category: 'sesiones',
+        category: 'cursos',
         img: 'https://d22fxaf9t8d39k.cloudfront.net/6482215d1fe6e84e47ac8a1816b1a94206fdfc0d6883e5611af9cb25e0dcfffc156461.png',
         stock: '10',
         description: 'busca equilibrar y energizar los centros de energía del cuerpo'
     },
 
     {
-        "id": '4',
-        "name": 'Lazos con el Alma',
-        "price": '8400',
-        "img": 'https://d22fxaf9t8d39k.cloudfront.net/3038612c1d17a85826ec49928e9bcc574f86cad37583e5c4f8aeacc74a9131ba156461.png',
+        id: '4',
+        name: 'Lazos con el Alma',
+        price: '8400',
+        category: 'cursos',
+        img: 'https://d22fxaf9t8d39k.cloudfront.net/3038612c1d17a85826ec49928e9bcc574f86cad37583e5c4f8aeacc74a9131ba156461.png',
         stock: '10',
         description: ' El objetivo es descubrir y nutrir aspectos internos, sanar heridas emocionales y promover un mayor autoconocimiento y aceptación'
     }
 
 ]
 
-export const getProducts = ()=> {
-return new Promise ((resolve) => {
-    setTimeout (() => {
-        resolve (products)
-    }, 500)
-})
+export const getProducts = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products)
+        }, 500)
+    })
+}
+
+export const getProductsById = (productId) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === productId))
+        }, 500)
+    })
+}
+
+export const getProductsByCategory = (categoryId) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.filter(prod => prod.category === categoryId))
+        }, 500)
+    }
+    )
 }
