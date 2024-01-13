@@ -1,0 +1,84 @@
+/* Estilos generales del componente Cart */
+.Cart {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Estilos para los elementos del carrito */
+.CartItem {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.CartItem img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+/* Estilos para el total y los botones */
+.CartFooter {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.CartTotal {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.CartButtons {
+    display: flex;
+    gap: 10px;
+}
+
+.CartButtons button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.CartButtons button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el mensaje cuando no hay items en el carrito */
+.EmptyCartMessage {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.EmptyCartMessage h1 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.EmptyCartMessage a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+    border: 1px solid #007bff;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.EmptyCartMessage a:hover {
+    background-color: #007bff;
+    color: #fff;
+}

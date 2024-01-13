@@ -1,5 +1,4 @@
 import CartWidget from "../CartWidget/CartWidget";
-import { FaShoppingCart } from "react-icons/fa";
 import "bulma/css/bulma.css";
 import { NavLink, Link } from "react-router-dom";
 
@@ -15,15 +14,14 @@ const NavBar = () => {
             </div>
             <div className="navbar-menu">
                 <div className="navbar-start" style={{ justifyContent: 'center', width: '100%' }}>
-                    <NavLink to={`/category/sesiones`} className="navbar-item" activeClassName="active">sesiones</NavLink>
-                    <NavLink to={`/category/productos`} className="navbar-item" activeClassName="active">productos</NavLink>
-                    <NavLink to={`/category/cursos`} className="navbar-item" activeClassName="active">cursos</NavLink>
-                    <NavLink to={`/category/rituales`} className="navbar-item" activeClassName="active">rituales</NavLink>
+                    <NavLink to={`/category/sesiones`} activeClassName="active" className="navbar-item">Sesiones</NavLink>
+                    <NavLink to={`/category/productos`} activeClassName="active" className="navbar-item">Productos</NavLink>
+                    <NavLink to={`/category/cursos`} activeClassName="active" className="navbar-item" >Cursos</NavLink>
                 </div>
                 <div className="navbar-end">
                     <div className="navbar-item">
-                        <FaShoppingCart style={{ fontSize: "2em", color: "gold" }} />
-                        <span className="tag is-link">0</span>
+                        <CartWidget style={{ fontSize: "2em", color: "white" }} />
+                        <span className="tag is-link"></span>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,61 @@
+/* styles.css */
+
+.cart-item {
+    display: flex;
+    border: 1px solid #ddd;
+    /* Borde para la apariencia de tarjeta */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    overflow: hidden;
+    /* Evitar que la imagen sobresalga */
+    margin-bottom: 20px;
+}
+
+.cart-item img {
+    width: 100px;
+    /* Tamaño máximo de la imagen */
+    height: 100px;
+    /* Altura máxima de la imagen */
+    object-fit: cover;
+    /* Ajuste de la imagen para cubrir la caja */
+}
+
+.cart-item div {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.cart-item h2,
+.cart-item p {
+    color: black;
+    /* Cambia el color de la fuente a negro */
+}
+
+.cart-item button {
+    background-color: black;
+    color: gold;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cart-item button:hover {
+    background-color: gold;
+    color: black;
+}
+
+/* Estilos adicionales para hacerlo más responsive */
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        /* Cambia a diseño de columna en pantallas pequeñas */
+    }
+
+    .cart-item img {
+        width: 100%;
+        /* La imagen ocupa el ancho completo en pantallas pequeñas */
+        height: auto;
+        /* Altura automática para mantener la proporción de la imagen */
+    }
+}

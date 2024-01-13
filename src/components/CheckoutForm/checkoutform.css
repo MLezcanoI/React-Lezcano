@@ -1,0 +1,75 @@
+/* TuArchivo.css */
+
+/* Estilos generales para el contenedor principal */
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    /* Color de fondo */
+    border-radius: 8px;
+    border: 1px solid #333;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    min-width: 300px;
+    max-width: 500px;
+    min-height: 400px;
+    margin: auto;
+}
+
+/* Estilos para el contenedor secundario "formulario2" */
+.formulario2 {
+    text-align: center;
+    /* Centra el contenido del formulario */
+}
+
+/* Estilos para el título dentro de "formulario2" */
+.formulario2 h1 {
+    color: #333;
+    /* Color del texto del título */
+}
+
+/* Estilos para los campos de entrada dentro de la clase "userName" */
+.userName {
+    margin-bottom: 20px;
+    /* Mayor espacio entre campos */
+}
+
+/* Estilos para los campos de entrada dentro de la clase "userName" */
+.userName input {
+    width: 100%;
+    /* Ocupa el ancho completo del contenedor */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+/* Estilos para las etiquetas dentro de la clase "userName" */
+.userName label {
+    display: block;
+    /* Hace que las etiquetas ocupen un bloque completo */
+    margin-bottom: 5px;
+    color: #555;
+    /* Color del texto de la etiqueta */
+}
+
+/* Estilos para el botón dentro del formulario */
+input[type="submit"] {
+    background-color: #000000;
+    color: #ffd700;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    /* Transición suave del color de fondo */
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
+    /* Cambia el color de fondo al pasar el ratón sobre el botón */
+}

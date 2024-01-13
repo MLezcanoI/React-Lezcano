@@ -1,32 +1,47 @@
-import { useState, useEffect } from "react";
-import { getProducts, getProductsByCategory } from '../../asyncMock';
-import ItemList from '../ItemList/ItemList';
+import { useState, useEffect, useCallback } from "react";
+import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { db } from "../../services/firebase/firebaseConfig";
 
 const ItemListContainer = ({ greeting }) => {
-    const [products, setProducts] = useState([])
-    const {categoryId} = useParams()
+    const [products, setProducts] = useState([]);
+    const [loading,  setLoading] = useState(true);
+    const { categoryId } = useParams();
 
+    const fetchProducts = useCallback (async () => {
+        setLoading(true);
 
+        try {
+            const collectionRef = collection(db, "products");
+            const response = await (categoryId
+                ? getDocs(query(collectionRef, where("category", "==", categoryId)))
+                : getDocs(collectionRef));
 
+            const productsAdapted = response.docs ? response.docs.map((doc) => {
+                const data = doc.data();
+                return { id: doc.id, ...data };
+            }) : [];
+
+            setProducts(productsAdapted);
+        } catch (error) {
+            console.error('error al obtener datos:', error.message );
+        } finally {
+            setLoading(false);
+        }
+    }, [categoryId, setLoading]);
+
+    // Llama a fetchProducts al montar el componente y cuando categoryId cambia
     useEffect(() => {
-        const asynFunc = categoryId ? getProductsByCategory : getProducts
-        asynFunc(categoryId)
-            .then(response => {
-                setProducts(response)
-            })
-            .catch(error => {
-                console.error(error)
-            })
-    }, [categoryId])
+        fetchProducts();
+    }, [categoryId, fetchProducts]);
 
     return (
         <div>
-            <h1 className="title is-size-3">{greeting}</h1>
+            <h1>{greeting}</h1>
             <ItemList products={products} />
         </div>
-    )
-}
+    );
+};
 
 export default ItemListContainer;

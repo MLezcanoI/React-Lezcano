@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Item = ({ id, name, img, price, stock }) => {
     return (
-        <article className="card has-background-black has-text-gold m-4" style={{ maxWidth: '200px' }}>
+        <article className="card has-background-black has-text-white m-4" style={{ maxWidth: '200px' }}>
             <header>
                 <h2>
                     {name}
