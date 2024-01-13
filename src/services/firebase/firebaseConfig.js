@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import {getFirestore} from 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDQAZ7jVM9UwSRu3flKpSCEXOeyIpCT1t0",
+    apiKey: process.env.REACT_APP_API_KEY,
     authDomain: "holistic-hole.firebaseapp.com",
     projectId: "holistic-hole",
     storageBucket: "holistic-hole.appspot.com",
