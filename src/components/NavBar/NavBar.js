@@ -21,7 +21,6 @@ const NavBar = () => {
                 <div className="navbar-end">
                     <div className="navbar-item">
                         <CartWidget style={{ fontSize: "2em", color: "white" }} />
-                        <span className="tag is-link"></span>
                     </div>
                 </div>
             </div>
