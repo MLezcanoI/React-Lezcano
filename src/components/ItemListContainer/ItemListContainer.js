@@ -3,6 +3,7 @@ import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { getDocs, collection, query, where } from "firebase/firestore";
 import { db } from "../../services/firebase/firebaseConfig";
+import './itemListCont.css';
 
 const ItemListContainer = ({ greeting }) => {
     const [products, setProducts] = useState([]);
@@ -31,14 +32,13 @@ const ItemListContainer = ({ greeting }) => {
         }
     }, [categoryId, setLoading]);
 
-    // Llama a fetchProducts al montar el componente y cuando categoryId cambia
     useEffect(() => {
         fetchProducts();
     }, [categoryId, fetchProducts]);
 
     return (
         <div>
-            <h1>{greeting}</h1>
+            <h1 className="greet">{greeting}</h1>
             <ItemList products={products} />
         </div>
     );

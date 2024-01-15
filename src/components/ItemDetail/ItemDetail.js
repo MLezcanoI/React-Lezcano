@@ -25,8 +25,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
             <picture>
                 <img src={img} alt={name} className="ItemImg" />
             </picture>
-
-            <section>
+            <div className="card-info">
                 <p className="Info">
                     Categoria: {category}
                 </p>
@@ -36,7 +35,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
                 <p className="Info">
                     Precio: ${price}
                 </p>
-            </section>
+            </div>
             <footer className="ItemFooter">
                 {
                     quantityAdded > 0 ? (

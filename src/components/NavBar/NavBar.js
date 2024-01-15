@@ -20,7 +20,7 @@ const NavBar = () => {
                 </div>
                 <div className="navbar-end">
                     <div className="navbar-item">
-                        <CartWidget style={{ fontSize: "2em", color: "white" }} />
+                        <CartWidget style={{ fontSize: "2rem", color: "white" }} />
                     </div>
                 </div>
             </div>
